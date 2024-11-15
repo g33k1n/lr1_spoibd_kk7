@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot Users</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Users</h1>
+    <form action="{{ url_for('main.add_user') }}" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="telegram_id" placeholder="Telegram ID" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit" class="btn btn-primary">Add User</button>
+    </form>
+
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }} ({{ user.telegram_id }})</li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Flask==2.2.3
+Flask-SQLAlchemy==2.5.1
+python-telegram-bot==20.1
+mysql-connector-python==8.0.32
+    
