@@ -3,7 +3,7 @@ import threading
 import random
 import time
 
-bot = telebot.TeleBot("8130581202:AAFb5xN-9DII429WUfSgSmPKMUXKsyA1Bog")  # Замените на токен вашего бота
+bot = telebot.TeleBot("8130581202:AAFb5xN-9DII429WUfSgSmPKMUXKsyA1Bog")  
 
 # Словарь приветственных сообщений для команды /start
 start_texts = {
